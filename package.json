@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "type": "module"
   },
   "eslintConfig": {
     "extends": [
@@ -35,5 +36,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "1. Los componentes no deben de salirse del div con id \"parent\" al arrastrarse",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saraigyg/challenge_front.git"
+  },
+  "author": "Sarai Gonzalez y Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saraigyg/challenge_front/issues"
+  },
+  "homepage": "https://github.com/saraigyg/challenge_front#readme"
 }
