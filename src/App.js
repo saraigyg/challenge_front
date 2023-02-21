@@ -8,9 +8,12 @@ const App = () => {
   // Fetch data from the API
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/photos')
-      .then(response => response.json())
-      .then(data => setMoveableComponents(data));
-  }, []);
+    .then(response => response.json())
+    .then(data => {
+      setMoveableComponents(data); 
+    });
+}, []);
+
 
 
   const addMoveable = () => {
@@ -63,29 +66,29 @@ const App = () => {
   };
 
   return (
-    <main style={{ height : "100vh", width: "100vw" }}>
-      <button onClick={addMoveable}>Add Moveable1</button>
-      <div
-        id="parent"
-        style={{
-          position: "relative",
-          background: "black",
-          height: "80vh",
-          width: "80vw",
-        }}
-      >
-        {moveableComponents.map((item, index) => (
-          <Component
-            {...item}
-            key={index}
-            updateMoveable={updateMoveable}
-            handleResizeStart={handleResizeStart}
-            setSelected={setSelected}
-            isSelected={selected === item.id}
-          />
-        ))}
-      </div>
-    </main>
+
+    <main style={{ height: "100vh", width: "100vw" }}>
+        <button onClick={addMoveable}>Add Moveable1</button>
+        <div
+          id="parent"
+          style={{
+            position: "relative",
+            background: "black",
+            height: "80vh",
+            width: "80vw",
+          }}
+        >
+          {moveableComponents.map((item, index) => (
+            <Component
+              {...item}
+              key={index}
+              updateMoveable={updateMoveable}
+              handleResizeStart={handleResizeStart}
+              setSelected={setSelected}
+              isSelected={selected === item.id} />
+          ))}
+        </div>
+      </main>
   );
 };
 
